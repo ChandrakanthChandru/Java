@@ -1,23 +1,26 @@
 import java.util.*;
-class BubbleSort
+class  BubbleSort
 {
-	public static void main(String[]args){
-		int[]a={10,9,8,7,6,5,4,3,2,1,0};
-
-		for (int i=0;i<a.length-1;i++ )
+	public static void main(String[] args) 
+	{
+		int[]a={5,-33,-9,-33,44,33,-99};
+		System.out.println(Arrays.toString(a));
+		bubblesort(a);
+	}
+	public static void bubblesort(int[]a)
+	{
+		for (int i=0;i<a.length-1 ;i++ )
 		{
-			for (int j=i+1;j<a.length ;j++ )
+			for (int j=0;j<a.length-1;j++ )
 			{
-				if (a[j]<a[i])
+				if(a[j]>a[j+1])
 				{
-					int temp=a[i];
-					a[i]=a[j];
-					a[j]=temp;
+					int temp=a[j];
+					a[j]=a[j+1];
+					a[j+1]=temp;
 				}
 			}
 		}
-		for(int num:a){
-			System.out.print(num+" ");
-		}
+		System.out.println(Arrays.toString(a));
 	}
 }
